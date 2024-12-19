@@ -1,0 +1,86 @@
+/* Crew Page Styles */
+.crew {
+    padding: 60px 20px;
+    background: var(--background-light);
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+.crew h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.crew p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.crew-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.crew-member {
+    background: var(--background-light);
+    color: var(--text-color-dark);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crew-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+.crew-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.crew-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.crew-member p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .crew-members {
+        gap: 20px;
+    }
+
+    .crew-member {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .crew h1 {
+        font-size: 2rem;
+    }
+
+    .crew p {
+        font-size: 1rem;
+    }
+}

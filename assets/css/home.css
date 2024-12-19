@@ -1,0 +1,340 @@
+/* Header */
+header {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links li a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+header .nav-links li a:hover {
+    background: var(--text-color-light);
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Prevents content or image overflow */
+    background-color: var(--secondary-color); /* Fallback color */
+}
+
+.hero img.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire section */
+    z-index: 0; /* Keeps the image behind the overlay */
+}
+
+.hero .hero-overlay {
+    position: relative;
+    z-index: 1; /* Brings overlay content above the image */
+    color: var(--text-color-light);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Improves text readability */
+    animation: fadeInDown 1.2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero .btn {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.hero .btn:hover {
+    background: var(--accent-color);
+}
+
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: var(--secondary-color);
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about .features {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .feature {
+    text-align: center;
+    background: var(--background-light);
+    color: var(--text-color-dark);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 250px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
+
+/* Courses Section */
+.courses {
+    padding: 60px 20px;
+    background: var(--background-light);
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--secondary-color);
+    color: var(--text-color-light);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    flex-wrap: wrap;
+}
+
+.course img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.course-details {
+    flex: 1;
+}
+
+.course-details h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.course-details p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.course .btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.course .btn:hover {
+    background: var(--accent-color);
+}
+
+/* Crew Section */
+.crew {
+    padding: 60px 20px;
+    background: var(--secondary-color);
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.crew h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.crew-members {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.crew-member {
+    background: var(--background-light);
+    color: var(--text-color-dark);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.crew-member img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.crew-member h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.crew-member p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Contact Us Section */
+.contact {
+    padding: 60px 20px;
+    background: var(--secondary-color);
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background: var(--text-color-light);
+    color: var(--text-color-dark);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text-color-dark);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    color: var(--text-color-dark);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: #fff;
+}
+
+.contact-form button {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: var(--accent-color);
+}
+
+.contact-info {
+    font-size: 1rem;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
